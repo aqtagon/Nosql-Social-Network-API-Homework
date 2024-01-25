@@ -2,13 +2,21 @@
   "name": "nosql-social-network-api-homework",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aqtagon/Nosql-Social-Network-API-Homework.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url":"https://github.com/aqtagon/Nosql-Social-Network-API-Homework/issues"
+  },
   "dependencies": {
     "express": "^4.18.2",
     "mongoose": "^8.1.1"
