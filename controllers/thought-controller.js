@@ -4,7 +4,7 @@ const thoughtController = {
     getAllThoughts(req, res) {
       Thought.find({})
         .populate({
-          path: "thoughts",
+          path: "reactions",
         })
         .sort({ _id: -1 })
         .then((dbUserData) => res.json(dbUserData))
@@ -16,7 +16,7 @@ const thoughtController = {
     getThoughtById({ params }, res) {
         Thought.findOne({ _id: params.thoughtId })
           .populate({
-            path: "thoughts",
+            path: "reactions",
           })
           .then((dbUserData) => {
             if (!dbUserData) {
