@@ -6,7 +6,7 @@ const userController = {
       .sort({ _id: -1 })
       .then(dbUserData => res.json(dbUserData))
       .catch(err => {
-        console.error(err); // Log the error to the server console for debugging.
+        console.error(err); 
         res.status(500).json({ message: "Error fetching users", error: err });
       });
   },
@@ -71,7 +71,7 @@ const userController = {
   addFriend({ params }, res) {
     User.findOneAndUpdate(
       { _id: params.userId },
-      { $addToSet: { friends: params.friendId } }, // Use $addToSet to avoid duplicates
+      { $addToSet: { friends: params.friendId } }, 
       { new: true, runValidators: true }
     )
       .then(dbUserData => {

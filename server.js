@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-// MongoDB Atlas connection string - Ensure your password is correctly inserted
+
 const uri = "mongodb+srv://ahmeddanawi:CgKWAY24cQdtRV97@cluster0.vdn5cgj.mongodb.net/?retryWrites=true&w=majority";
 
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
